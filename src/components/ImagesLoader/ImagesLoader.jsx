@@ -1,4 +1,5 @@
 import { DotSpinner } from '@uiball/loaders';
+import React from 'react';
 
 const ImagesLoader = () => {
     return (

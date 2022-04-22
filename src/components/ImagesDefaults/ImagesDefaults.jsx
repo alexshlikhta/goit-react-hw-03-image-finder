@@ -1,3 +1,4 @@
+import React from 'react';
 import image from '../../images/searching.jpeg';
 
 const ImagesDefaults = () => {

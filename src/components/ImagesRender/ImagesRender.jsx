@@ -54,9 +54,6 @@ export default class ImageRender extends Component {
         } else {
             ImagesAPI(imageQuery, page)
             .then(query => {
-                if (query.hits.length < 12) {
-                    this.setState({ loadMore: false });
-                } 
                 if (query.hits.length === 0) {
                     return Promise.reject(new Error(`Results for: ${imageQuery}  not found.`));
                 } else {
@@ -66,6 +63,10 @@ export default class ImageRender extends Component {
                         loadMore: true,
                     });
                     this.scrollTo();
+
+                    if (query.hits.length < 12) {
+                        this.setState({ loadMore: false });
+                    } 
                 }
             })
             .catch(error => this.setState({ error: error, status: 'rejected' }));

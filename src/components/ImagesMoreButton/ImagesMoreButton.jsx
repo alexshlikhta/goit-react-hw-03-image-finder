@@ -1,10 +1,16 @@
-const ImagesMoreButton = ({ onClick }) => {
+import React from 'react';
+
+const ImagesMoreButton = ({ loadMore, onClick }) => {
     return (
-        <div className="ButtonWrap">
-            <button className="Button" type="button" onClick={onClick}>
-                Load more
-            </button>
-        </div>
+        <>
+            {loadMore && (
+                <div className="ButtonWrap">
+                    <button className="Button" type="button" onClick={onClick}>
+                        Load more
+                    </button>
+                </div>
+            )}
+        </>
     );
 };
 

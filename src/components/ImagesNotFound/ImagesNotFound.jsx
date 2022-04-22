@@ -1,8 +1,11 @@
+import React from 'react';
 
-export default function ImagesNotFound({ error }) {
-  return (
-    <div className="Error">
-      <h2>{error}</h2>
-    </div>
-  );
-}
+const ImagesNotFound = ({ error }) => {
+    return (
+        <div className="Error">
+            <h2>{error}</h2>
+        </div>
+    );
+};
+
+export default ImagesNotFound;
